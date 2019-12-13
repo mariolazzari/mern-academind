@@ -1,0 +1,24 @@
+.input {
+  margin: 1rem 0;
+}
+
+.input label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.input input {
+  font: inherit;
+  display: block;
+  width: 100%;
+  border: 1px solid #ccc;
+  background: white;
+  padding: 0.15rem 0.25rem;
+}
+
+.input input:focus {
+  outline: none;
+  background: #e7e7e7;
+  border-color: black;
+}

@@ -1,0 +1,17 @@
+.product-item {
+  margin: 1rem 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  border-radius: 6px;
+  padding: 1rem;
+}
+
+.product-item h2 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.75rem;
+  color: #343434;
+}
+
+.product-item p {
+  margin: 0;
+  color: #505050;
+}
