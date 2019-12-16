@@ -8,17 +8,19 @@ import {
 
 import Users from "./user/pages/Users";
 import NewPlace from "./places/pages/NewPlace";
+import MainNavigation from "./shared/components/Navigation/MainNavigation";
 
-const App = () => {
-  return (
-    <Router>
+const App = () => (
+  <Router>
+    <MainNavigation />
+    <main>
       <Switch>
         <Route path="/" exact component={Users} />
         <Route path="/places/new" component={NewPlace} />
         <Redirect to="/" />
       </Switch>
-    </Router>
-  );
-};
+    </main>
+  </Router>
+);
 
 export default App;
