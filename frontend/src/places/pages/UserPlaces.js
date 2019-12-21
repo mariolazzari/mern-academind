@@ -10,7 +10,7 @@ const DUMMY_PLACES = [
     imageUrl:
       "https://it.wikipedia.org/wiki/Riva_del_Garda#/media/File:Riva_del_Garda_-_10.jpg",
     address: " Via Fiume, 28, 38066 Riva del Garda TN",
-    location: { lat: 40.4, lng: 41.41 },
+    location: { lat: 45.883333, lng: 10.833333 },
     creator: "u1"
   },
   {
