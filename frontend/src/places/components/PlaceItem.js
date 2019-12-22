@@ -10,8 +10,6 @@ const PlaceItem = props => {
   const openMapHandler = () => setShowMap(true);
   const closeMapHandler = () => setShowMap(false);
 
-  console.log("props", props);
-
   return (
     <Fragment>
       <Modal
