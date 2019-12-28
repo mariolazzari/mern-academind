@@ -1,24 +1,28 @@
-const express = require("express");
+const express = require('express');
+const bodyParser = require('body-parser');
 
-// express settings
+const placesRoutes = require('./routes/places-routes');
+const usersRoutes = require('./routes/users-routes');
+const HttpError = require('./models/http-error');
+
 const app = express();
-app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
 
-// routes
-app.use("/api/places", require("./routes/places-routes"));
+app.use(bodyParser.json());
 
-// error handler
+app.use('/api/places', placesRoutes); // => /api/places...
+app.use('/api/users', usersRoutes);
+
+app.use((req, res, next) => {
+  const error = new HttpError('Could not find this route.', 404);
+  throw error;
+});
+
 app.use((error, req, res, next) => {
-  if (res.haaderSent) {
+  if (res.headerSent) {
     return next(error);
   }
-  res
-    .status(error.code || 500)
-    .json({ message: error.message || "Unknown error." });
+  res.status(error.code || 500)
+  res.json({message: error.message || 'An unknown error occurred!'});
 });
 
-// start server
-app.listen(5000, () => {
-  console.log("App listening on port 5000.");
-});
+app.listen(5000);
