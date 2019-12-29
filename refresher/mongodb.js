@@ -1,5 +1,5 @@
 const MongoClient = require("mongodb").MongoClient;
-const url = "mongodb://localhost/products-test";
+const url = "mongodb://localhost/products_test";
 
 const createProduct = async (req, res, next) => {
   const { name, price } = req.body;
@@ -9,7 +9,7 @@ const createProduct = async (req, res, next) => {
   try {
     await client.connect();
     const db = client.db();
-    const result = db.collection("products").insertOne(newProduct);
+    db.collection("products").insertOne(newProduct);
   } catch (error) {
     return res.status(500).json({ message: "Cannot store data." });
   }
@@ -31,7 +31,7 @@ const getProducts = async (req, res, next) => {
     return res.status(500).json({ message: "Cannot retrive data." });
   }
   client.close();
-  res.json(products);
+  res.json({ products });
 };
 
 module.exports = { createProduct, getProducts };
