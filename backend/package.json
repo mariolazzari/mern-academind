@@ -10,16 +10,16 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "axios": "^0.19.0",
+    "axios": "^0.19.2",
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.19.0",
     "express": "^4.17.1",
-    "express-validator": "^6.2.0",
+    "express-validator": "^6.4.0",
     "jsonwebtoken": "^8.5.1",
-    "mongoose": "^5.7.8",
+    "mongoose": "^5.8.11",
     "mongoose-unique-validator": "^2.0.3",
     "multer": "^1.4.2",
-    "uuid": "^3.3.3"
+    "uuid": "^3.4.0"
   },
   "devDependencies": {
     "nodemon": "^1.19.4"
